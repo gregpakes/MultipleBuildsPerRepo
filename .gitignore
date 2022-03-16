@@ -1,0 +1,11 @@
+
+/CheckArtifactConsistencyTask/src/*.js
+/CheckArtifactConsistencyTask/src/*.js.map
+/CheckArtifactConsistencyTask/tests/**/*.js
+/CheckArtifactConsistencyTask/tests/**/*.js.map
+/CheckArtifactConsistencyTask/test-output
+
+*.vsix
+*.lnk
+
+node_modules
