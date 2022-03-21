@@ -4,7 +4,7 @@ import * as ttm from 'azure-pipelines-task-lib/mock-test';
 
 describe('Input Tests', function (){
     // it('should fail System.TeamFoundationCollectionUri is not supplied', function (done: Mocha.Done){
-    //     const tp = path.join(__dirname, 'inputs/System_TeamFoundationCollectionUriNotProvided.js');
+    //     const tp = path.join(__dirname, 'System_TeamFoundationCollectionUriNotProvided.ts');
     //     const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
     //     tr.run();
     //     assert.strictEqual(tr.failed, true, 'should have failed');
@@ -13,7 +13,7 @@ describe('Input Tests', function (){
     // });
 
     it('should fail Release.ReleaseIdNotProvided is not supplied', function (done: Mocha.Done){
-        const tp = path.join(__dirname, 'inputs/Release_ReleaseIdNotProvided.js');
+        const tp = path.join(__dirname, 'Release_ReleaseIdNotProvided.ts');
         const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
         tr.run();
         assert.strictEqual(tr.failed, true, 'should have failed');
