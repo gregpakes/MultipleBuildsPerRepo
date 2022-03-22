@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "CheckArtifactConsistencyTask/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "build - CheckArtifactConsistencyTask",
+			"detail": "npm run clean && npm run lint && npm run transpile"
+		}
+	]
+}

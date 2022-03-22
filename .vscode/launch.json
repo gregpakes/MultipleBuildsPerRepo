@@ -19,7 +19,8 @@
             "cwd": "${workspaceRoot}/CheckArtifactConsistencyTask",   
             "internalConsoleOptions": "openOnSessionStart",
             "sourceMaps": true,
-            "diagnosticLogging": true
+            "diagnosticLogging": true,
+            "preLaunchTask": "build - CheckArtifactConsistencyTask"
         }
     ]
 }
