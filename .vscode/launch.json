@@ -14,7 +14,7 @@
             "args": [     
                 "-r",
                 "ts-node/register",                            
-                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/*.ts"            
+                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/**/*.ts"            
             ],            
             "cwd": "${workspaceRoot}/CheckArtifactConsistencyTask",   
             "internalConsoleOptions": "openOnSessionStart",
