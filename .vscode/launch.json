@@ -14,12 +14,13 @@
             "args": [     
                 "-r",
                 "ts-node/register",                            
-                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/*.ts"            
+                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/**/*.ts"            
             ],            
             "cwd": "${workspaceRoot}/CheckArtifactConsistencyTask",   
             "internalConsoleOptions": "openOnSessionStart",
             "sourceMaps": true,
-            "diagnosticLogging": true
+            "diagnosticLogging": true,
+            "preLaunchTask": "build - CheckArtifactConsistencyTask"
         }
     ]
 }
