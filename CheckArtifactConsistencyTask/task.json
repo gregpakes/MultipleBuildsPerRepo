@@ -27,7 +27,7 @@
     "instanceNameFormat": "Check Artifact Consistency",
     "execution":
     {
-        "Node": 
+        "Node14": 
         {
             "target":"CheckArtifactConsistencyTask.js"
         }
