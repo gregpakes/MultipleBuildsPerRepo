@@ -1,5 +1,5 @@
-import tl = require("azure-pipelines-task-lib/task");
-import * as webApi from "azure-devops-node-api/WebApi";
+import * as tl from "azure-pipelines-task-lib/task";
+import webApi = require("azure-devops-node-api/WebApi");
 import { IRequestHandler } from "azure-devops-node-api/interfaces/common/VsoBaseInterfaces";
 import { Artifact } from "azure-devops-node-api/interfaces/ReleaseInterfaces";
 import { Build } from "azure-devops-node-api/interfaces/BuildInterfaces";
