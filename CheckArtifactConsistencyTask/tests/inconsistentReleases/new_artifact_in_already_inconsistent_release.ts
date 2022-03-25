@@ -4,16 +4,11 @@ import tmrm = require('azure-pipelines-task-lib/mock-run');
 import path = require('path');
 import fakeWebApi = require("../FakeWebApi");
 
-/*
- * This test setup up for a release with artifacts A and B.
- * A and B both return build statuses for one another, i.e. they need to be consistent for the release to go ahead.
- */
-
 const taskPath = path.join(__dirname, '..', '..', 'src', 'CheckArtifactConsistencyTask.js');
 const tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-const RELEASE_R1 = 99;  // First artifact from commit C1 triggers... A1 and B0
-const RELEASE_R2 = 100; // Artifact from commit C2 triggers... A2 and B0
+const RELEASE_R1 = 99;  // First artifact from commit C1 triggers... Artifacts: A1 and B0
+const RELEASE_R2 = 100; // Artifact from commit C2 triggers... Artifacts: A2 and B0
 const PROJECT_NAME = 'TestProject';
 
 const gitCommit_C0 = { 
