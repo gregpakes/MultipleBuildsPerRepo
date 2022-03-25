@@ -11,7 +11,8 @@ export const buildApi = {
 };
 
 export const gitApi = {
-    getStatuses: sinon.stub()
+    getStatuses: sinon.stub(),
+    getCommit: sinon.stub()
 }
 
 export class StubWebApi {

@@ -16,4 +16,19 @@ describe('Consistent Release Tests', function (){
         done();
     });
 
+    it('should succeed when two independent artifacts make up the release',function(done:Mocha.Done){
+        const tp = path.join(__dirname, 'consistentReleases', 'two_independent_artifacts.js');
+        const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
+        tr.run();
+
+        assert.strictEqual(tr.succeeded, true);
+
+        // "Found 0 other builds" should be found for each artifact
+        const index = tr.stdout.indexOf('Found 0 other builds');
+        assert.strictEqual(index >= 0, true);
+        assert.strictEqual(tr.stdout.indexOf('Found 0 other builds', index + 1) >= 0, true);
+        
+        done();
+    });
+
 });
