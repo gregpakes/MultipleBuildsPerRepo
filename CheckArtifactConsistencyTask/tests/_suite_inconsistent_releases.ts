@@ -4,27 +4,27 @@ import * as ttm from 'azure-pipelines-task-lib/mock-test';
 
 describe('Inconsistent Release Tests', function (){
 
-    // it('should fail when a dependent artifact is still building',function(done:Mocha.Done){
-    //     const tp = path.join(__dirname, 'inconsistentReleases', 'two_dependent_artifacts_one_still_building.js');
-    //     const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
-    //     tr.run();
+    it('should fail when a dependent artifact is still building',function(done:Mocha.Done){
+        const tp = path.join(__dirname, 'inconsistentReleases', 'two_dependent_artifacts_one_still_building.js');
+        const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
+        tr.run();
 
-    //     assert.strictEqual(tr.failed, true);
-    //     assert.strictEqual(tr.stdout.indexOf('Detected build with status InProgress') >= 0, true);
+        assert.strictEqual(tr.failed, true);
+        assert.strictEqual(tr.stdout.indexOf('Detected build with status InProgress') >= 0, true);
         
-    //     done();
-    // });
+        done();
+    });
 
-    // it('should fail when a dependent artifacts build has failed',function(done:Mocha.Done){
-    //     const tp = path.join(__dirname, 'inconsistentReleases', 'two_dependent_artifacts_one_build_failed.js');
-    //     const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
-    //     tr.run();
+    it('should fail when a dependent artifacts build has failed',function(done:Mocha.Done){
+        const tp = path.join(__dirname, 'inconsistentReleases', 'two_dependent_artifacts_one_build_failed.js');
+        const tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
+        tr.run();
 
-    //     assert.strictEqual(tr.failed, true);
-    //     assert.strictEqual(tr.stdout.indexOf('Detected failed build build_b - build_for_artifact_b_new') >= 0, true);
+        assert.strictEqual(tr.failed, true);
+        assert.strictEqual(tr.stdout.indexOf('Detected failed build build_b - build_for_artifact_b_new') >= 0, true);
         
-    //     done();
-    // });
+        done();
+    });
 
     it('should fail when a new version of an inconsistent pair of artifacts is released', function(done:Mocha.Done) {
         /* 

@@ -14,7 +14,7 @@
             "args": [     
                 "-r",
                 "ts-node/register",                            
-                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/_suite_inconsistent_releases.ts"            
+                "${workspaceRoot}/CheckArtifactConsistencyTask/tests/*.ts"            
             ],            
             "cwd": "${workspaceRoot}/CheckArtifactConsistencyTask",   
             "internalConsoleOptions": "openOnSessionStart",
